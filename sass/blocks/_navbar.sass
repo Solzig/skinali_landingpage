@@ -33,7 +33,7 @@
     padding: 16px 0
     background-color: $primary
     color: #ffffff
-    transform: translateY(-100%)
+    transform: translateY(-200%)
     &_active
         transform: translateY(0)
     &__nav
@@ -73,3 +73,19 @@
         display: block
         font-size: 14px
         color: $text-color-light
+@media (max-width: 991px)
+    .navbar
+        &__mobile, &__landline
+            display: none        
+@media (max-width: 576px)
+    .logo
+        display: none
+    .menu
+        &-button
+            height: 60px
+        &__nav
+            flex-direction: column
+        &__link
+            margin-bottom: 20px
+            width: 100%
+            text-align: left
