@@ -5,9 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Фабрика скинали</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <!-- Emmit header.header>.navbar+.hero|c-->
+    <header class="header">
+        <div class="menu menu_active">
+                <div class="container">
+                    <!-- Emmit nav.menu__nav>a.menu__link*7[href=#]-->
+                    <nav class="menu__nav">
+                        <a href="#" class="menu__link">Главная</a>
+                        <a href="#" class="menu__link">Продукция</a>
+                        <a href="#" class="menu__link">Каталог</a>
+                        <a href="#" class="menu__link">Примеры работ</a>
+                        <a href="#" class="menu__link">Примерка изображений</a>
+                        <a href="#" class="menu__link">Стоимость дилерам</a>
+                        <a href="#" class="menu__link">О скинали</a>
+                    </nav>
+                </div>
+                <!-- /.container-->
+            </div>
+        <div class="navbar">
+            <div class="container">
+                <div class="navbar-wrap">
+                    <!--Emmit button.menu-button>span.menu-button__line*3 -->
+                    <button class="menu-button navbar__menu-button">
+                        <span class="menu-button__line"></span>
+                        <span class="menu-button__line"></span>
+                        <span class="menu-button__line"></span>
+                    </button>
+                    <div class="logo navbar__logo">
+                        <strong class="logo__text">Фабрика скинали №1</strong>
+                        <span class="logo_description">ведущий производитель скинали</span>
+                    </div>
+                    <!-- /.logo navbar__logo -->
+                    <div class="navbar__mobile">
+                        <a class="navbar__phone" href="tel:+79121234567">+7 912 123-45-67</a>
+                        <span class="navbar__work-time navbar__small-text">без выходных 9-21</span>
+                    </div>
+                    <div class="navbar__landline">
+                        <a class="navbar__phone" href="tel:+74991234567">+7 499 123-45-67</a>
+                        <a class="navbar__email navbar__small-text" href="mailto:info@mail.cu">info@mail.cu</a>
+                    </div>
+                    <!-- Emmit button.button-o.navbar__button{Получить консультацию}-->
+                    <button class="button-o navbar__button">Получить консультацию</button>  
+                </div>
+            </div>
+        </div>
+        <!-- /.navbar -->
+        <div class="hero">
+            <div class="container">
+                <h1 class="hero__title">Гарантия <br>минимальной цен <br>на скинали</h1>
+                <span class="hero__subtitle">от 3 000 р/м2</span>
+            <button class="button hero_button">Заказать скинали</button>
+            </div>
+        </div>
+        <!-- /.hero -->
+    </header>
+    <!-- /.header -->
 </body>
 </html>
