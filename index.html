@@ -64,6 +64,64 @@
         <!-- /.hero -->
     </header>
     <!-- /.header -->
+    <main>
+        <section class="offer bg-secondary ">
+            <div class="container">
+                <div class="offer__block offer-block">
+                    <h2 class="offer__title">Оставте заявку на расчет</h2>
+                    <span class="offer__subtitle">и получите скидку 30% на изготовление скинали или фартука для кухни</span>
+                <form action="" class="form offer__form">
+                    <!-- Emmit .form__row>.form__group*3>label.form__label+input.input.form__input -->
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="offer_model" class="form__label">Вид стекла</label>
+                            <input type="text" class="input form__input" id="offer_model">
+                        </div>
+                        <div class="form__group">
+                            <label for="offer_width" class="form__label">Ширина, см</label>
+                            <input type="text" class="input form__input" id="offer_width">
+                        </div>
+                        <div class="form__group">
+                            <label for="offer_height" class="form__label">Высота, см</label>
+                            <input type="text" class="input form__input" id="offer_height">
+                        </div>
+                    </div>
+                    <!-- /.form__row -->
+                    <div class="form__row form__row-checkbox">
+                        <div class="form__checkbox">
+                            <input class="checkbox" type="checkbox" id="install">
+                            <label class="checkbox-label" for="install">
+                                Монтаж
+                            </label>
+                        </div>
+                        <div class="form__checkbox">
+                            <input class="checkbox" type="checkbox" id="delivery">
+                            <label class="checkbox-label" for="delivery">
+                                Доставка
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.form__row -->
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="text" class="input form__input" placeholder="Ваше имя">
+                        </div>
+                        <div class="form__group">
+                            <input type="tel" class="input form__input" placeholder="Ваш телефон">
+                        </div>
+                        <div class="form__group">
+                            <input type="submit" class="button form__button" value="Получить скидку">
+                        </div>
+                    </div>
+                    <!-- /.form___row -->
+                </form>
+                </div>
+                <!-- /.offer__block offer-block -->
+            </div>
+            <!-- /.contaier  -->
+        </section>
+        <!-- /.offer -->
+    </main>
     <!-- Подключение виджета обратной связи через соц. сети spikmi-->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=528"></script>
 </body>

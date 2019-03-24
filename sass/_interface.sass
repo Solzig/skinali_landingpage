@@ -2,7 +2,9 @@ body
     +light
     color: $text-color
 button
-    background: #ffffff    
+    background: #ffffff
+    &:hover
+        cursor: pointer
 .button-o
     border: 2px solid $primary
     padding: 17px 22px
@@ -17,6 +19,30 @@ button
     background-color: $primary
     color: #ffffff
     +bold
+.bg-secondary
+    background: $bg-secondary
+.input
+    height: 80px
+    padding-left: 30px
+    border: 1px solid #dddddd
+input[type="checkbox"]
+    display: none
+    &:checked + label:before
+        background: url('../img/icon/check-mark.png') no-repeat center
+.checkbox        
+    &-label
+        display: flex
+        align-items: center
+        margin-right: 40px
+        &:hover
+            cursor: pointer
+        &:before
+            content: ''
+            display: inline-block
+            width: 30px
+            height: 30px
+            border: 1px solid #dddddd
+            margin-right: 20px
 @media (max-width: 576px)
     .button-o
         font-size: 10px
