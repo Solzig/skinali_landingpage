@@ -4,6 +4,7 @@
     top: 0
     width: 100%
     background-color: #ffffff
+    border-bottom: 1px solid #f1f1f1
     z-index: 99
     &-wrap
         display: flex
@@ -26,7 +27,7 @@
         text-decoration: none
 .menu
     position: fixed
-    z-index: 0
+    z-index: 1
     top: 80px
     left: 0
     width: 100%
@@ -75,6 +76,7 @@
         display: block
         font-size: 14px
         color: $text-color-light
+        
 @media (max-width: 991px)
     .navbar
         &__mobile, &__landline

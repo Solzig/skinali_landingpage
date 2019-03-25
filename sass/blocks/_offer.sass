@@ -35,8 +35,14 @@
     &__button
         height: 80px
         width: 100%
+        &:hover
+            border: 2px solid $primary
+            background-color: #ffffff
+            color: $primary
+            cursor: pointer
 .form__group:last-child .form__input:last-child 
-	border-right-width: 1px        
+	border-right-width: 1px   
+         
 @media (max-width: 1199px)
     .offer
         &-block

@@ -2,6 +2,10 @@ body
     +light
     color: $text-color
     min-width: 360px
+a 
+    text-decoration: none    
+img
+    max-width: 100%    
 .section
     padding: 100px 0
     &-title 
@@ -22,6 +26,10 @@ button
     text-transform: uppercase
     color: $primary
     +bold
+    &:hover
+        background-color: $primary
+        color: #ffffff
+        cursor: pointer
 .button
     border: none
     text-transform: uppercase
@@ -29,6 +37,23 @@ button
     background-color: $primary
     color: #ffffff
     +bold
+    &-fitting 
+        padding: 10px
+        text-transform: uppercase
+        color: $primary
+        background-color: #ffffff
+    &-add
+        background-color: lighten($primary, 10%)
+        color: #ffffff
+    &-like 
+        display: flex
+        justify-content: center
+        background-color: $primary
+        height: 30px
+        width: 30px
+        border: none
+        &__img
+            max-width: 18px
 .bg-secondary
     background: $bg-secondary
 .input
@@ -53,6 +78,7 @@ input[type="checkbox"]
             height: 30px
             border: 1px solid #dddddd
             margin-right: 20px
+            
 @media (max-width: 576px)
     .button-o
         font-size: 10px
