@@ -50,6 +50,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #262626;
 }
 
 img {
@@ -916,5 +917,47 @@ input[type="checkbox"]:checked + label:before {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   font-size: 20px;
+}
+
+.contacts-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contacts-block__item {
+  text-align: center;
+}
+
+.contacts__image {
+  margin-bottom: 25px;
+}
+
+.contacts__text {
+  font-size: 16px;
+}
+
+.contacts__link {
+  color: #262626;
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .contacts-block__item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .contacts__address {
+    max-width: 200px;
+    margin: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
