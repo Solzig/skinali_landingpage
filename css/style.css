@@ -960,4 +960,28 @@ input[type="checkbox"]:checked + label:before {
     margin: auto;
   }
 }
+
+.questions__title {
+  font-size: 30px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.questions__link {
+  font-size: 24px;
+  color: #507fe1;
+  border-bottom: 1px solid #507fe1;
+}
+
+.questions-block {
+  max-width: 800px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
 /*# sourceMappingURL=style.css.map */
