@@ -34,6 +34,7 @@
     padding: 16px 0
     background-color: $primary
     color: #ffffff
+    transition: 0.2s
     transform: translateY(-200%)
     opacity: 0
     &_active
@@ -59,6 +60,10 @@
         border-left: 1px solid rgba(#510bba, 0.1)
         height: 80px
         width: 70px
+        &:hover
+            cursor: pointer
+        &:focus
+            outline: none
         &__line
             display: block
             width: 20px

@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Фабрика скинали</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Emmet header.header>.navbar+.hero|c-->
     <header class="header">
-        <div class="menu menu_active">
+        <div class="menu">
                 <div class="container">
                     <!-- Emmet nav.menu__nav>a.menu__link*7[href=#]-->
                     <nav class="menu__nav">
                         <a href="#" class="menu__link">Главная</a>
                         <a href="#" class="menu__link">Продукция</a>
-                        <a href="#" class="menu__link">Каталог</a>
+                        <a href="#catalog" class="menu__link">Каталог</a>
                         <a href="#" class="menu__link">Примеры работ</a>
-                        <a href="#" class="menu__link">Примерка изображений</a>
+                        <a href="#before" class="menu__link">Примерка изображений</a>
                         <a href="#" class="menu__link">Стоимость дилерам</a>
-                        <a href="#" class="menu__link">О скинали</a>
+                        <a href="#factory" class="menu__link">О скинали</a>
                     </nav>
                 </div>
                 <!-- /.container-->
@@ -49,7 +48,7 @@
                         <a class="navbar__email navbar__small-text" href="mailto:info@mail.cu">info@mail.cu</a>
                     </div>
                     <!-- Emmet button.button-o.navbar__button{Получить консультацию}-->
-                    <button class="button-o navbar__button">Получить консультацию</button>  
+                    <a href="#offer_2" class="button-o navbar__button">Получить консультацию</a>  
                 </div>
             </div>
         </div>
@@ -58,14 +57,14 @@
             <div class="container">
                 <h1 class="hero__title">Гарантия <br>минимальной цен <br>на скинали</h1>
                 <span class="hero__subtitle">от 3 000 р/м2</span>
-            <button class="button hero_button">Заказать скинали</button>
+            <a href="#offer" class="button hero_button">Заказать скинали</a>
             </div>
         </div>
         <!-- /.hero -->
     </header>
     <!-- /.header -->
     <main>
-        <section class="offer bg-secondary ">
+        <section class="offer bg-secondary" id="offer">
             <div class="container">
                 <div class="offer__block offer-block offer-block_calc-bg">
                     <h2 class="offer__title">Оставте заявку на расчет</h2>
@@ -74,16 +73,23 @@
                     <!-- Emmet .form__row>.form__group*3>label.form__label+input.input.form__input -->
                     <div class="form__row">
                         <div class="form__group">
-                            <label for="offer_model" class="form__label">Вид стекла</label>
-                            <input type="text" class="input form__input" id="offer_model">
+                            <label for="select_type" class="form__label">Вид стекла</label>
+                            <input type="hidden" name="type" id="select-type" value="С печатью">
+                            <div class="select form__select">
+                                <div class="select_checked">C спечатью</div>
+                                <ul class="select__dropdown">
+                                    <li class="select__option" data-value="С печатью">С печатью</li>
+                                    <li class="select__option" data-value="Без печати">Без печати</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="form__group">
                             <label for="offer_width" class="form__label">Ширина, см</label>
-                            <input type="text" class="input form__input" id="offer_width">
+                            <input type="number" class="input form__input" id="offer_width">
                         </div>
                         <div class="form__group">
                             <label for="offer_height" class="form__label">Высота, см</label>
-                            <input type="text" class="input form__input" id="offer_height">
+                            <input type="number" class="input form__input" id="offer_height">
                         </div>
                     </div>
                     <!-- /.form__row -->
@@ -121,7 +127,7 @@
             <!-- /.contaier  -->
         </section>
         <!-- /.offer -->
-        <section class="features section">
+        <section class="features section" id="features">
             <div class="container">
                 <h2 class="section-title section__title">Наши приемущества</h2>
                 <!-- Emmet .features-block>.features-block__item*6>img[src="img/features/feature-$.png"].features-block__image+p.features-block__text|c -->
@@ -168,7 +174,7 @@
             <!-- /.container -->
         </section>
         <!-- /.features section -->
-        <section class="section catalog">
+        <section class="section catalog" id="catalog">
             <div class="container">
                 <h2 class="section-title section__title">Каталог скинали</h2>
                 <div class="catalog-block">
@@ -304,7 +310,7 @@
             <!-- /.container -->
         </section>
         <!-- /.section catalog -->
-        <section class="section blog">
+        <section class="section blog" id="blog">
             <div class="container">
                 <div class="blog__heading">
                         <h3 class="blog__title">Полезное или что важно знать о скинали</h3>
@@ -353,7 +359,7 @@
             <!-- /.container -->
         </section>
         <!-- /.section blog -->
-        <section class="section price">
+        <section class="section price" id="price">
             <div class="container">
                 <h2 class="section-title section__title">Цены и виды скинали</h2>
                 <!-- /.section-title section__title -->
@@ -501,7 +507,7 @@
             <!-- /.container -->
         </section>
         <!-- /.section price -->
-        <section class="section steps">
+        <section class="section steps" id="steps">
             <div class="container">
                 <h2 class="section-title section__title">Этапы работ</h2>
                 <!-- /.section-title section__title -->
@@ -561,8 +567,48 @@
             <!-- /.container -->
         </section>
         <!-- /.section step -->
-
-        <section class="section reviews">
+        <section class="section before" id="before">
+            <div class="container">
+                <h2 class="section-title section__title">До и после</h2>
+                <div class="before-slider-wrap">
+                    <div class="before-slider">
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/sample-before.png" alt="">
+                                <img src="img/before-slider/sample-after.png" alt="">
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-slider__item">
+                                <div class="before-after">
+                                    <img src="img/before-slider/sample-before.png" alt="">
+                                    <img src="img/before-slider/sample-after.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-slider__item">
+                                <div class="before-after">
+                                    <img src="img/before-slider/sample-before.png" alt="">
+                                    <img src="img/before-slider/sample-after.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-slider-arrows">
+                       <button class="arrow arrow-left">
+                            <img src="img/before-slider/left.png" alt="left arrow icon">
+                        </button>
+                        <button class="arrow arrow-right">
+                            <img src="img/before-slider/right.png" alt="right arrow icon">
+                        </button>
+                    </div>    
+                </div>
+                <!-- /.before-slider-wrap -->
+            </div>
+        </section>
+        <!-- /.section before -->
+        <section class="section reviews" id="reviews">
             <div class="container">
                 <h2 class="section-title section__title">Отзовы наших клиентов</h2>
                 <!-- /.section-title section__title -->
@@ -597,63 +643,63 @@
             <!-- /.container -->
         </section>
         <!-- /.section reviews -->
-        <section class="offer">
-                <div class="container">
-                    <div class="offer__block offer-block offer-block_price-bg">
-                        <h2 class="offer__title">Ищите где дешевле и лучше?</h2>
-                        <span class="offer__subtitle">Если у Вас есть расчет от другой фирмы, но Вы хотите цену дешевле, укажите её и мы вам пересчитаем заказ с максимальной скидкой</span>
-                    <form action="" class="form offer__form">
-                        <!-- Emmet .form__row>.form__group*3>label.form__label+input.input.form__input -->
-                        <div class="form__row">
-                            <div class="form__group">
-                                <input type="text" class="input form__input" id="offer_model" placeholder="Ваше имя">
-                            </div>
-                            <div class="form__group">
-                                <input type="text" class="input form__input" id="offer_width" placeholder="Ваш телефон">
-                            </div>
-                            <div class="form__group">
-                                <input type="text" class="input form__input" id="offer_height" placeholder="Ваша цена">
-                            </div>
+        <section class="offer" id="offer_2">
+            <div class="container">
+                <div class="offer__block offer-block offer-block_price-bg">
+                    <h2 class="offer__title">Ищите где дешевле и лучше?</h2>
+                    <span class="offer__subtitle">Если у Вас есть расчет от другой фирмы, но Вы хотите цену дешевле, укажите её и мы вам пересчитаем заказ с максимальной скидкой</span>
+                <form action="" class="form offer__form">
+                    <!-- Emmet .form__row>.form__group*3>label.form__label+input.input.form__input -->
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="text" class="input form__input" id="offer_model" placeholder="Ваше имя">
                         </div>
-                        <!-- /.form__row -->
-                        <div class="form__row">
-                            <div class="form__group">
-                                <input type="submit" class="button form__button form__button-price" value="Получить рачет со скидкой">
-                            </div>
-                            <div class="form__group">
-                                <span class="form__policy">
-                                    Ваши данные надежно защищены. Отправление заявки ни к чему не обязывает.
-                                </span>
-                                <!-- /.form__policy -->
-                            </div>
-                            <!-- /.form__group -->
+                        <div class="form__group">
+                            <input type="text" class="input form__input" id="offer_width" placeholder="Ваш телефон">
                         </div>
-                        <!-- /.form___row -->
-                    </form>
+                        <div class="form__group">
+                            <input type="text" class="input form__input" id="offer_height" placeholder="Ваша цена">
+                        </div>
                     </div>
-                    <!-- /.offer__block offer-block -->
+                    <!-- /.form__row -->
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="submit" class="button form__button form__button-price" value="Получить рачет со скидкой">
+                        </div>
+                        <div class="form__group">
+                            <span class="form__policy">
+                                Ваши данные надежно защищены. Отправление заявки ни к чему не обязывает.
+                            </span>
+                            <!-- /.form__policy -->
+                        </div>
+                        <!-- /.form__group -->
+                    </div>
+                    <!-- /.form___row -->
+                </form>
                 </div>
-                <!-- /.contaier  -->
-            </section> 
-            <!-- /.offer -->
-            <section class="section factory">
-                <div class="container">
-                    <h2 class="section-title section__title">О производстве</h2>
-                    <!-- /.section-title section__title -->
-                    <div class="factory-block">
-                        <div class="factory-block__image"><img src="img/factory/factory-image.png" alt="О производстве"></div>
-                        <!-- /.factory-block__image -->
-                        <div class="factory-block__text">
-                            <p>Приятно, граждане, наблюдать, как элементы политического процесса заблокированы в рамках своих собственных рациональных ограничений. </p>
-                            <p>Задача организации, в особенности же синтетическое тестирование, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для прогресса профессионального сообщества.</p></div>
-                        <!-- /.factory-block__text -->
+                <!-- /.offer__block offer-block -->
+            </div>
+            <!-- /.contaier  -->
+        </section> 
+        <!-- /.offer -->
+        <section class="section factory" id="factory">
+            <div class="container">
+                <h2 class="section-title section__title">О производстве</h2>
+                <!-- /.section-title section__title -->
+                <div class="factory-block">
+                    <div class="factory-block__image"><img src="img/factory/factory-image.png" alt="О производстве"></div>
+                    <!-- /.factory-block__image -->
+                       <div class="factory-block__text">
+                        <p>Приятно, граждане, наблюдать, как элементы политического процесса заблокированы в рамках своих собственных рациональных ограничений. </p>
+                        <p>Задача организации, в особенности же синтетическое тестирование, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для прогресса профессионального сообщества.</p></div>
+                    <!-- /.factory-block__text -->
                     </div>
                     <!-- /.factory-block -->
                 </div>
                 <!-- /.container -->
             </section>
             <!-- /.section factory -->
-            <section class="section contacts">
+            <section class="section contacts" id="contacts">
                 <div class="container">
                     <div class="h2 section-title section__title">Контакты</div>
                     <!-- /.h2 section-title section__title -->
@@ -691,9 +737,9 @@
             </section>
             <!-- /.section contacts -->
             <div class="map" id="map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A19eda2ecb11a15d28d175edd5e60d282b2cba3771bd73d65b16068dc6918c94d&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
+                
             </div>
-            <section class="section questions">
+            <section class="section questions" id="questions">
                 <div class="container">
                     <div class="questions-block">
                         <h3 class="questions__title">Остались вопросы?</h3>
@@ -741,5 +787,11 @@
     <!-- /.footer -->
     <!-- Подключение виджета обратной связи через соц. сети spikmi-->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=528"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="vendor/js/jquery.event.move.js"></script>
+    <script src="vendor/js/jquery.twentytwenty.js"></script>
+    <script src="vendor/js/jquery.maskedinput.min.js"></script>
+    <script src="vendor/js/slick.js"></script>
+    <script src='js/main.js'></script>
 </body>
 </html>
